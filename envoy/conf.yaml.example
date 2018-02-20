@@ -1,0 +1,6 @@
+init_config:
+  #
+
+instances:
+  # Only once instance should be used per box
+  - {}
