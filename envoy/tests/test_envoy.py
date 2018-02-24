@@ -29,3 +29,6 @@ class TestEnvoy:
             },
         ],
     }
+
+    def test_test(self):
+        assert 0 == 0
