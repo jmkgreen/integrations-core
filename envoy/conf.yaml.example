@@ -10,6 +10,10 @@ instances:
   # https://www.envoyproxy.io/docs/envoy/latest/operations/admin
 
   - stats_url: http://localhost:80/stats
+  #   If the stats page is behind basic auth.
+  #   username: USERNAME
+  #   password: PASSWORD
+
   #   tags:
   #     - instance:foo
 
@@ -23,7 +27,3 @@ instances:
   #   settings enabled and attempt to reach the URL directly.
   #
   #   skip_proxy: false
-
-  #   If the stats page is behind basic auth.
-  #   username: USERNAME
-  #   password: PASSWORD
