@@ -10,12 +10,13 @@ instances:
   # https://www.envoyproxy.io/docs/envoy/latest/operations/admin
 
   - stats_url: http://localhost:80/stats
-  #   If the stats page is behind basic auth.
-  #   username: USERNAME
-  #   password: PASSWORD
 
   #   tags:
   #     - instance:foo
+
+  #   If the stats page is behind basic auth.
+  #   username: USERNAME
+  #   password: PASSWORD
 
   #   The (optional) disable_ssl_validation will instruct the check to
   #   skip the validation of the SSL certificate of the URL being tested.
