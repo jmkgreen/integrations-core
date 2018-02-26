@@ -1,1 +1,7 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
+envoy.runtime.load_error,count,,error,,Total number of load attempts that resulted in an error,-1,envoy,
+envoy.runtime.override_dir_not_exists,count,,,,Total number of loads that did not use an override directory,0,envoy,
+envoy.runtime.override_dir_exists,count,,,,Total number of loads that did use an override directory,0,envoy,
+envoy.runtime.load_success,count,,success,,Total number of load attempts that were successful,1,envoy,
+envoy.runtime.num_keys,gauge,,location,,Number of keys currently loaded,0,envoy,
+envoy.,,,,,,,envoy,
