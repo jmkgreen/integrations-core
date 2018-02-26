@@ -2,8 +2,8 @@ from .utils import make_metric_tree
 
 METRICS = {
     '': {
+        'tags': (),
         'method': '',
-        'fields': (),
     },
 }
 
