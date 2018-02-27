@@ -9,4 +9,8 @@ envoy.cluster_manager.cds.update_attempt,count,,request,,Total API fetches attem
 envoy.cluster_manager.cds.update_success,count,,request,,Total API fetches completed successfully,1,envoy,cds successful api accesses
 envoy.cluster_manager.cds.update_failure,count,,request,,Total API fetches that failed (either network or schema errors),-1,envoy,cds failed api accesses
 envoy.cluster_manager.cds.version,gauge,,item,,Hash of the contents from the last successful API fetch,0,envoy,
+envoy.http.no_route,count,,request,,Total requests that had no route and resulted in a 404,-1,envoy,
+envoy.http.no_cluster,count,,request,,Total requests in which the target cluster did not exist and resulted in a 404,-1,envoy,
+envoy.http.rq_redirect,count,,request,,Total requests that resulted in a redirect response,0,envoy,
+envoy.http.rq_total,count,,request,,Total routed requests,0,envoy,
 envoy.,,,,,,,envoy,

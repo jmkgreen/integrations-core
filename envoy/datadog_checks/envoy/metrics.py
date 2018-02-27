@@ -41,6 +41,22 @@ METRICS = {
         'tags': (),
         'method': 'gauge',
     },
+    'http.no_route': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.no_cluster': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.rq_redirect': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.rq_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
