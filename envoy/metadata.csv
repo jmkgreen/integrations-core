@@ -19,4 +19,7 @@ envoy.vhost.vcluster.upstream_rq_3xx,count,,response,,Aggregate HTTP 3xx respons
 envoy.vhost.vcluster.upstream_rq_4xx,count,,response,,Aggregate HTTP 4xx response codes,-1,envoy,vhost 4xx response codes
 envoy.vhost.vcluster.upstream_rq_5xx,count,,response,,Aggregate HTTP 5xx response codes,-1,envoy,vhost 5xx response codes
 envoy.vhost.vcluster.upstream_rq_time,gauge,,millisecond,,Request time milliseconds,-1,envoy,vhost request time ms
+envoy.cluster.ratelimit.ok,count,,response,,Total under limit responses from the rate limit service,1,envoy,
+envoy.cluster.ratelimit.error,count,,response,,Total errors contacting the rate limit service,-1,envoy,
+envoy.cluster.ratelimit.over_limit,count,,response,,Total over limit responses from the rate limit service,-1,envoy,
 envoy.,,,,,,,envoy,

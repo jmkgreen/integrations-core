@@ -81,6 +81,18 @@ METRICS = {
         'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'histogram',
     },
+    'cluster.ratelimit.ok': {
+        'tags': ('route_target_cluster', ),
+        'method': 'count',
+    },
+    'cluster.ratelimit.error': {
+        'tags': ('route_target_cluster', ),
+        'method': 'count',
+    },
+    'cluster.ratelimit.over_limit': {
+        'tags': ('route_target_cluster', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
