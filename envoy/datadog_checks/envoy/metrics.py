@@ -58,27 +58,27 @@ METRICS = {
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_1xx': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_2xx': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_3xx': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_4xx': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_5xx': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'count',
     },
     'vhost.vcluster.upstream_rq_time': {
-        'tags': ('virtual_host_name', 'virtual cluster name', ),
+        'tags': ('virtual_host_name', 'virtual_cluster_name', ),
         'method': 'histogram',
     },
     '': {
