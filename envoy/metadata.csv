@@ -13,4 +13,10 @@ envoy.http.no_route,count,,request,,Total requests that had no route and resulte
 envoy.http.no_cluster,count,,request,,Total requests in which the target cluster did not exist and resulted in a 404,-1,envoy,
 envoy.http.rq_redirect,count,,request,,Total requests that resulted in a redirect response,0,envoy,
 envoy.http.rq_total,count,,request,,Total routed requests,0,envoy,
+envoy.vhost.vcluster.upstream_rq_1xx,count,,response,,Aggregate HTTP 1xx response codes,0,envoy,vhost 1xx response codes
+envoy.vhost.vcluster.upstream_rq_2xx,count,,response,,Aggregate HTTP 2xx response codes,1,envoy,vhost 2xx response codes
+envoy.vhost.vcluster.upstream_rq_3xx,count,,response,,Aggregate HTTP 3xx response codes,0,envoy,vhost 3xx response codes
+envoy.vhost.vcluster.upstream_rq_4xx,count,,response,,Aggregate HTTP 4xx response codes,-1,envoy,vhost 4xx response codes
+envoy.vhost.vcluster.upstream_rq_5xx,count,,response,,Aggregate HTTP 5xx response codes,-1,envoy,vhost 5xx response codes
+envoy.vhost.vcluster.upstream_rq_time,gauge,,millisecond,,Request time milliseconds,-1,envoy,vhost request time ms
 envoy.,,,,,,,envoy,
