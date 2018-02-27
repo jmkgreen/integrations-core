@@ -105,6 +105,18 @@ METRICS = {
         'tags': ('stat_prefix', ),
         'method': 'count',
     },
+    'cluster.grpc.success': {
+        'tags': ('route_target_cluster', 'grpc_service', 'grpc_method', ),
+        'method': 'count',
+    },
+    'cluster.grpc.failure': {
+        'tags': ('route_target_cluster', 'grpc_service', 'grpc_method', ),
+        'method': 'count',
+    },
+    'cluster.grpc.total': {
+        'tags': ('route_target_cluster', 'grpc_service', 'grpc_method', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',

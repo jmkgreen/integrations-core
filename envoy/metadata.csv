@@ -25,4 +25,7 @@ envoy.cluster.ratelimit.over_limit,count,,response,,Total over limit responses f
 envoy.http.ip_tagging.hit,count,,request,,Total number of requests that have the tag_name tag applied to it.,0,envoy,
 envoy.http.ip_tagging.no_hit,count,,request,,Total number of requests with no applicable IP tags.,0,envoy,
 envoy.http.ip_tagging.total,count,,request,,Total number of requests the IP Tagging Filter operated on.,0,envoy,
+envoy.cluster.grpc.success,count,,operation,,Total successful service/method calls,1,envoy,
+envoy.cluster.grpc.failure,count,,operation,,Total failed service/method calls,-1,envoy,
+envoy.cluster.grpc.total,count,,operation,,Total service/method calls,0,envoy,
 envoy.,,,,,,,envoy,
