@@ -93,6 +93,18 @@ METRICS = {
         'tags': ('route_target_cluster', ),
         'method': 'count',
     },
+    'http.ip_tagging.hit': {
+        'tags': ('stat_prefix', 'tag_name', ),
+        'method': 'count',
+    },
+    'http.ip_tagging.no_hit': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.ip_tagging.total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',

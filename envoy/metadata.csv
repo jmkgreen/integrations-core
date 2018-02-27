@@ -22,4 +22,7 @@ envoy.vhost.vcluster.upstream_rq_time,gauge,,millisecond,,Request time milliseco
 envoy.cluster.ratelimit.ok,count,,response,,Total under limit responses from the rate limit service,1,envoy,
 envoy.cluster.ratelimit.error,count,,response,,Total errors contacting the rate limit service,-1,envoy,
 envoy.cluster.ratelimit.over_limit,count,,response,,Total over limit responses from the rate limit service,-1,envoy,
+envoy.http.ip_tagging.hit,count,,request,,Total number of requests that have the tag_name tag applied to it.,0,envoy,
+envoy.http.ip_tagging.no_hit,count,,request,,Total number of requests with no applicable IP tags.,0,envoy,
+envoy.http.ip_tagging.total,count,,request,,Total number of requests the IP Tagging Filter operated on.,0,envoy,
 envoy.,,,,,,,envoy,
