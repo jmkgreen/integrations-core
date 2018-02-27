@@ -21,6 +21,26 @@ METRICS = {
         'tags': (),
         'method': 'gauge',
     },
+    'cluster_manager.cds.config_reload': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.cds.update_attempt': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.cds.update_success': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.cds.update_failure': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.cds.version': {
+        'tags': (),
+        'method': 'gauge',
+    },
     '': {
         'tags': (),
         'method': '',

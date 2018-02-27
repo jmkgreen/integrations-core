@@ -1,7 +1,12 @@
 metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name
-envoy.runtime.load_error,count,,error,,Total number of load attempts that resulted in an error,-1,envoy,
-envoy.runtime.override_dir_not_exists,count,,occurrence,,Total number of loads that did not use an override directory,0,envoy,
-envoy.runtime.override_dir_exists,count,,occurrence,,Total number of loads that did use an override directory,0,envoy,
-envoy.runtime.load_success,count,,success,,Total number of load attempts that were successful,1,envoy,
-envoy.runtime.num_keys,gauge,,location,,Number of keys currently loaded,0,envoy,
+envoy.runtime.load_error,count,,error,,Total number of load attempts that resulted in an error,-1,envoy,failed loads
+envoy.runtime.override_dir_not_exists,count,,occurrence,,Total number of loads that did not use an override directory,0,envoy,loads without override directory
+envoy.runtime.override_dir_exists,count,,occurrence,,Total number of loads that did use an override directory,0,envoy,loads with override directory
+envoy.runtime.load_success,count,,success,,Total number of load attempts that were successful,1,envoy,successful loads
+envoy.runtime.num_keys,gauge,,location,,Number of keys currently loaded,0,envoy,keys loaded
+envoy.cluster_manager.cds.config_reload,count,,request,,Total API fetches that resulted in a config reload due to a different config,0,envoy,cds config reloads
+envoy.cluster_manager.cds.update_attempt,count,,request,,Total API fetches attempted,0,envoy,cds total api accesses
+envoy.cluster_manager.cds.update_success,count,,request,,Total API fetches completed successfully,1,envoy,cds successful api accesses
+envoy.cluster_manager.cds.update_failure,count,,request,,Total API fetches that failed (either network or schema errors),-1,envoy,cds failed api accesses
+envoy.cluster_manager.cds.version,gauge,,item,,Hash of the contents from the last successful API fetch,0,envoy,
 envoy.,,,,,,,envoy,
