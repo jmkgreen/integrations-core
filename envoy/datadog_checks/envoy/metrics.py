@@ -165,6 +165,30 @@ METRICS = {
         'tags': ('stat_prefix', 'route_config_name', ),
         'method': 'gauge',
     },
+    'tcp.downstream_cx_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'tcp.downstream_cx_no_route': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'tcp.downstream_cx_tx_bytes_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'tcp.downstream_cx_tx_bytes_buffered': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'tcp.downstream_flow_control_paused_reading_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'tcp.downstream_flow_control_resumed_reading_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',

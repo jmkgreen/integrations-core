@@ -22,9 +22,9 @@ envoy.vhost.vcluster.upstream_rq_time,gauge,,millisecond,,Request time milliseco
 envoy.cluster.ratelimit.ok,count,,response,,Total under limit responses from the rate limit service,1,envoy,
 envoy.cluster.ratelimit.error,count,,response,,Total errors contacting the rate limit service,-1,envoy,
 envoy.cluster.ratelimit.over_limit,count,,response,,Total over limit responses from the rate limit service,-1,envoy,
-envoy.http.ip_tagging.hit,count,,request,,Total number of requests that have the tag_name tag applied to it.,0,envoy,
-envoy.http.ip_tagging.no_hit,count,,request,,Total number of requests with no applicable IP tags.,0,envoy,
-envoy.http.ip_tagging.total,count,,request,,Total number of requests the IP Tagging Filter operated on.,0,envoy,
+envoy.http.ip_tagging.hit,count,,request,,Total number of requests that have the tag_name tag applied to it,0,envoy,
+envoy.http.ip_tagging.no_hit,count,,request,,Total number of requests with no applicable IP tags,0,envoy,
+envoy.http.ip_tagging.total,count,,request,,Total number of requests the IP Tagging Filter operated on,0,envoy,
 envoy.cluster.grpc.success,count,,operation,,Total successful service/method calls,1,envoy,
 envoy.cluster.grpc.failure,count,,operation,,Total failed service/method calls,-1,envoy,
 envoy.cluster.grpc.total,count,,operation,,Total service/method calls,0,envoy,
@@ -40,4 +40,10 @@ envoy.http.rds.update_attempt,count,,request,,Total API fetches attempted,0,envo
 envoy.http.rds.update_success,count,,request,,Total API fetches completed successfully,1,envoy,rds successful api accesses
 envoy.http.rds.update_failure,count,,request,,Total API fetches that failed (either network or schema errors),-1,envoy,rds failed api accesses
 envoy.http.rds.version,gauge,,item,,Hash of the contents from the last successful API fetch,0,envoy,
+envoy.tcp.downstream_cx_total,count,,connection,,Total number of connections handled by the filter,0,envoy,
+envoy.tcp.downstream_cx_no_route,count,,connection,,Number of connections for which no matching route was found,-1,envoy,
+envoy.tcp.downstream_cx_tx_bytes_total,count,,byte,,Total bytes written to the downstream connection,0,envoy,
+envoy.tcp.downstream_cx_tx_bytes_buffered,gauge,,byte,,Total bytes currently buffered to the downstream connection,0,envoy,
+envoy.tcp.downstream_flow_control_paused_reading_total,count,,occurrence,,Total number of times flow control paused reading from downstream,0,envoy,
+envoy.tcp.downstream_flow_control_resumed_reading_total,count,,occurrence,,Total number of times flow control resumed reading from downstream,0,envoy,
 envoy.,,,,,,,envoy,
