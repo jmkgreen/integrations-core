@@ -241,6 +241,58 @@ METRICS = {
         'tags': ('stat_prefix', ),
         'method': 'gauge',
     },
+    'redis.downstream_cx_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'redis.downstream_cx_protocol_error': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.downstream_cx_rx_bytes_buffered': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'redis.downstream_cx_rx_bytes_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.downstream_cx_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.downstream_cx_tx_bytes_buffered': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'redis.downstream_cx_tx_bytes_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.downstream_cx_drain_close': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.downstream_rq_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'redis.downstream_rq_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.splitter.invalid_request': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.splitter.unsupported_command': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'redis.command.total': {
+        'tags': ('stat_prefix', 'command', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
