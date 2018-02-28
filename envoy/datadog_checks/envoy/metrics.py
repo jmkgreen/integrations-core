@@ -117,6 +117,30 @@ METRICS = {
         'tags': ('route_target_cluster', 'grpc_service', 'grpc_method', ),
         'method': 'count',
     },
+    'http.dynamodb.operation.upstream_rq_total': {
+        'tags': ('stat_prefix', 'operation_name', ),
+        'method': 'count',
+    },
+    'http.dynamodb.operation.upstream_rq_time': {
+        'tags': ('stat_prefix', 'operation_name', ),
+        'method': 'histogram',
+    },
+    'http.dynamodb.table.upstream_rq_total': {
+        'tags': ('stat_prefix', 'table_name', ),
+        'method': 'count',
+    },
+    'http.dynamodb.table.upstream_rq_time': {
+        'tags': ('stat_prefix', 'table_name', ),
+        'method': 'histogram',
+    },
+    'http.dynamodb.error': {
+        'tags': ('stat_prefix', 'table_name', 'error_type', ),
+        'method': 'count',
+    },
+    'http.dynamodb.error.BatchFailureUnprocessedKeys': {
+        'tags': ('stat_prefix', 'table_name', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
