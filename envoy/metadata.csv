@@ -34,4 +34,5 @@ envoy.http.dynamodb.table.upstream_rq_total,count,,request,,Total number of requ
 envoy.http.dynamodb.table.upstream_rq_time,gauge,,millisecond,,Time spent on table_name tag table,-1,envoy,
 envoy.http.dynamodb.error,count,,error,,Total number of specific error_type tag for a given table_name tag,-1,envoy,
 envoy.http.dynamodb.error.BatchFailureUnprocessedKeys,count,,error,,Total number of partial batch failures for a given table_name tag,-1,envoy,
+envoy.http.buffer.rq_timeout,count,,timeout,,Total requests that timed out waiting for a full request,-1,envoy,
 envoy.,,,,,,,envoy,

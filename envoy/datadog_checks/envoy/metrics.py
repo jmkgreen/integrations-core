@@ -141,6 +141,10 @@ METRICS = {
         'tags': ('stat_prefix', 'table_name', ),
         'method': 'count',
     },
+    'http.buffer.rq_timeout': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
