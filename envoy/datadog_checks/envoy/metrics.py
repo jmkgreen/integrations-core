@@ -217,6 +217,30 @@ METRICS = {
         'tags': ('stat_prefix', ),
         'method': 'gauge',
     },
+    'ratelimit.total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'ratelimit.error': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'ratelimit.over_limit': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'ratelimit.ok': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'ratelimit.cx_closed': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'ratelimit.active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
     '': {
         'tags': (),
         'method': '',
