@@ -293,6 +293,154 @@ METRICS = {
         'tags': ('stat_prefix', 'command', ),
         'method': 'count',
     },
+    'mongo.decoding_error': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.delay_injected': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_get_more': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_insert': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_kill_cursors': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_tailable_cursor': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_no_cursor_timeout': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_await_data': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_exhaust': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_no_max_time': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_scatter_get': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_multi_get': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_query_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'mongo.op_reply': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_reply_cursor_not_found': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_reply_query_failure': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.op_reply_valid_cursor': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.cx_destroy_local_with_active_rq': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.cx_destroy_remote_with_active_rq': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.cx_drain_close': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'mongo.cmd.total': {
+        'tags': ('stat_prefix', 'cmd', ),
+        'method': 'count',
+    },
+    'mongo.cmd.reply_num_docs': {
+        'tags': ('stat_prefix', 'cmd', ),
+        'method': 'histogram',
+    },
+    'mongo.cmd.reply_size': {
+        'tags': ('stat_prefix', 'cmd', ),
+        'method': 'histogram',
+    },
+    'mongo.cmd.reply_time_ms': {
+        'tags': ('stat_prefix', 'cmd', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.query.total': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'count',
+    },
+    'mongo.collection.query.scatter_get': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'count',
+    },
+    'mongo.collection.query.multi_get': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'count',
+    },
+    'mongo.collection.query.reply_num_docs': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.query.reply_size': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.query.reply_time_ms': {
+        'tags': ('stat_prefix', 'collection', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.callsite.query.total': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'count',
+    },
+    'mongo.collection.callsite.query.scatter_get': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'count',
+    },
+    'mongo.collection.callsite.query.multi_get': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'count',
+    },
+    'mongo.collection.callsite.query.reply_num_docs': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.callsite.query.reply_size': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'histogram',
+    },
+    'mongo.collection.callsite.query.reply_time_ms': {
+        'tags': ('stat_prefix', 'collection', 'callsite', ),
+        'method': 'histogram',
+    },
     '': {
         'tags': (),
         'method': '',
