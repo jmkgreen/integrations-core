@@ -189,6 +189,34 @@ METRICS = {
         'tags': ('stat_prefix', ),
         'method': 'count',
     },
+    'auth.clientssl.update_success': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.update_failure': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.auth_no_ssl': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.auth_ip_white_list': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.auth_digest_match': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.auth_digest_no_match': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'auth.clientssl.total_principals': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
     '': {
         'tags': (),
         'method': '',
