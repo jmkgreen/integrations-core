@@ -145,6 +145,26 @@ METRICS = {
         'tags': ('stat_prefix', ),
         'method': 'count',
     },
+    'http.rds.config_reload': {
+        'tags': ('stat_prefix', 'route_config_name', ),
+        'method': 'count',
+    },
+    'http.rds.update_attempt': {
+        'tags': ('stat_prefix', 'route_config_name', ),
+        'method': 'count',
+    },
+    'http.rds.update_success': {
+        'tags': ('stat_prefix', 'route_config_name', ),
+        'method': 'count',
+    },
+    'http.rds.update_failure': {
+        'tags': ('stat_prefix', 'route_config_name', ),
+        'method': 'count',
+    },
+    'http.rds.version': {
+        'tags': ('stat_prefix', 'route_config_name', ),
+        'method': 'gauge',
+    },
     '': {
         'tags': (),
         'method': '',
