@@ -757,9 +757,477 @@ METRICS = {
         'tags': (),
         'method': 'count',
     },
-    '': {
+    'cluster_manager.cluster_added': {
         'tags': (),
-        'method': '',
+        'method': 'count',
+    },
+    'cluster_manager.cluster_modified': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.cluster_removed': {
+        'tags': (),
+        'method': 'count',
+    },
+    'cluster_manager.total_clusters': {
+        'tags': (),
+        'method': 'gauge',
+    },
+    'cluster.upstream_cx_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_active': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.upstream_cx_http1_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_http2_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_connect_fail': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_connect_timeout': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_connect_attempts_exceeded': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_overflow': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_connect_ms': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.upstream_cx_length_ms': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.upstream_cx_destroy': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_destroy_local': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_destroy_remote': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_destroy_with_active_rq': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_destroy_local_with_active_rq': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_destroy_remote_with_active_rq': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_close_notify': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_rx_bytes_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_rx_bytes_buffered': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.upstream_cx_tx_bytes_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_tx_bytes_buffered': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.upstream_cx_protocol_error': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_max_requests': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_cx_none_healthy': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_active': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.upstream_rq_pending_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_pending_overflow': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_pending_failure_eject': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_pending_active': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.upstream_rq_cancelled': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_maintenance_mode': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_timeout': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_per_try_timeout': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_rx_reset': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_tx_reset': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_retry': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_retry_success': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_retry_overflow': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_flow_control_paused_reading_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_flow_control_resumed_reading_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_flow_control_backed_up_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_flow_control_drained_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.membership_change': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.membership_healthy': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.membership_total': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.retry_or_shadow_abandoned': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.config_reload': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.update_attempt': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.update_success': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.update_failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.version': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.max_host_weight': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.bind_errors': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.attempt': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.success': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.passive_failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.network_failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.verify_cluster': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.health_check.healthy': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.outlier_detection.ejections_enforced_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_active': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.outlier_detection.ejections_overflow': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_enforced_consecutive_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_detected_consecutive_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_enforced_success_rate': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_detected_success_rate': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_enforced_consecutive_gateway_failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_detected_consecutive_gateway_failure': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_total': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.outlier_detection.ejections_consecutive_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_1xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_2xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_3xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_4xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.upstream_rq_time': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.canary.upstream_rq_1xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.canary.upstream_rq_2xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.canary.upstream_rq_3xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.canary.upstream_rq_4xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.canary.upstream_rq_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.canary.upstream_rq_time': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.internal.upstream_rq_1xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.internal.upstream_rq_2xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.internal.upstream_rq_3xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.internal.upstream_rq_4xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.internal.upstream_rq_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.internal.upstream_rq_time': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.external.upstream_rq_1xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.external.upstream_rq_2xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.external.upstream_rq_3xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.external.upstream_rq_4xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.external.upstream_rq_5xx': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.external.upstream_rq_time': {
+        'tags': ('name', ),
+        'method': 'histogram',
+    },
+    'cluster.zone.upstream_rq_1xx': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'count',
+    },
+    'cluster.zone.upstream_rq_2xx': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'count',
+    },
+    'cluster.zone.upstream_rq_3xx': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'count',
+    },
+    'cluster.zone.upstream_rq_4xx': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'count',
+    },
+    'cluster.zone.upstream_rq_5xx': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'count',
+    },
+    'cluster.zone.upstream_rq_time': {
+        'tags': ('name', 'from_zone', 'to_zone', ),
+        'method': 'histogram',
+    },
+    'cluster.lb_healthy_panic': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_zone_cluster_too_small': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_zone_routing_all_directly': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_zone_routing_sampled': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_zone_routing_cross_zone': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_local_cluster_not_ok': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_zone_number_differs': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_subsets_active': {
+        'tags': ('name', ),
+        'method': 'gauge',
+    },
+    'cluster.lb_subsets_created': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_subsets_removed': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_subsets_selected': {
+        'tags': ('name', ),
+        'method': 'count',
+    },
+    'cluster.lb_subsets_fallback': {
+        'tags': ('name', ),
+        'method': 'count',
     },
 }
 
