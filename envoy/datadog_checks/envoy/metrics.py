@@ -529,6 +529,234 @@ METRICS = {
         'tags': (),
         'method': 'gauge',
     },
+    'http.downstream_cx_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_ssl_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_http1_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_websocket_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_http2_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy_remote': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy_local': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy_active_rq': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy_local_active_rq': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_destroy_remote_active_rq': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_ssl_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_http1_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_websocket_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_http2_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_protocol_error': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_length_ms': {
+        'tags': ('stat_prefix', ),
+        'method': 'histogram',
+    },
+    'http.downstream_cx_rx_bytes_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_rx_bytes_buffered': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_tx_bytes_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_tx_bytes_buffered': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_cx_drain_close': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_cx_idle_timeout': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_flow_control_paused_reading_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_flow_control_resumed_reading_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_http1_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_http2_total': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_active': {
+        'tags': ('stat_prefix', ),
+        'method': 'gauge',
+    },
+    'http.downstream_rq_response_before_rq_complete': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_rx_reset': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_tx_reset': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_non_relative_path': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_too_large': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_1xx': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_2xx': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_3xx': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_4xx': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_5xx': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_ws_on_non_ws_route': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.downstream_rq_time': {
+        'tags': ('stat_prefix', ),
+        'method': 'histogram',
+    },
+    'http.rs_too_large': {
+        'tags': ('stat_prefix', ),
+        'method': 'count',
+    },
+    'http.user_agent.downstream_cx_total': {
+        'tags': ('stat_prefix', 'user_agent', ),
+        'method': 'count',
+    },
+    'http.user_agent.downstream_cx_destroy_remote_active_rq': {
+        'tags': ('stat_prefix', 'user_agent', ),
+        'method': 'count',
+    },
+    'http.user_agent.downstream_rq_total': {
+        'tags': ('stat_prefix', 'user_agent', ),
+        'method': 'count',
+    },
+    'listener.http.downstream_rq_1xx': {
+        'tags': ('address', 'stat_prefix', ),
+        'method': 'count',
+    },
+    'listener.http.downstream_rq_2xx': {
+        'tags': ('address', 'stat_prefix', ),
+        'method': 'count',
+    },
+    'listener.http.downstream_rq_3xx': {
+        'tags': ('address', 'stat_prefix', ),
+        'method': 'count',
+    },
+    'listener.http.downstream_rq_4xx': {
+        'tags': ('address', 'stat_prefix', ),
+        'method': 'count',
+    },
+    'listener.http.downstream_rq_5xx': {
+        'tags': ('address', 'stat_prefix', ),
+        'method': 'count',
+    },
+    'http2.rx_reset': {
+        'tags': (),
+        'method': 'count',
+    },
+    'http2.tx_reset': {
+        'tags': (),
+        'method': 'count',
+    },
+    'http2.header_overflow': {
+        'tags': (),
+        'method': 'count',
+    },
+    'http2.trailers': {
+        'tags': (),
+        'method': 'count',
+    },
+    'http2.headers_cb_no_stream': {
+        'tags': (),
+        'method': 'count',
+    },
+    'http2.too_many_header_frames': {
+        'tags': (),
+        'method': 'count',
+    },
     '': {
         'tags': (),
         'method': '',
