@@ -4,7 +4,7 @@ envoy.runtime.override_dir_not_exists,count,,occurrence,,Total number of loads t
 envoy.runtime.override_dir_exists,count,,occurrence,,Total number of loads that did use an override directory,0,envoy,loads with override directory
 envoy.runtime.load_success,count,,success,,Total number of load attempts that were successful,1,envoy,successful loads
 envoy.runtime.num_keys,gauge,,location,,Number of keys currently loaded,0,envoy,keys loaded
-envoy.cluster_manager.cds.config_reload,count,,event,,Total API fetches that resulted in a config reload due to a different config,0,envoy,cds config reloads
+envoy.cluster_manager.cds.config_reload,count,,request,,Total API fetches that resulted in a config reload due to a different config,0,envoy,cds config reloads
 envoy.cluster_manager.cds.update_attempt,count,,request,,Total API fetches attempted,0,envoy,cds total api accesses
 envoy.cluster_manager.cds.update_success,count,,request,,Total API fetches completed successfully,1,envoy,cds successful api accesses
 envoy.cluster_manager.cds.update_failure,count,,request,,Total API fetches that failed (either network or schema errors),-1,envoy,cds failed api accesses
@@ -35,7 +35,7 @@ envoy.http.dynamodb.table.upstream_rq_time,gauge,,millisecond,,Time spent on tab
 envoy.http.dynamodb.error,count,,error,,Total number of specific error_type tag for a given table_name tag,-1,envoy,
 envoy.http.dynamodb.error.BatchFailureUnprocessedKeys,count,,error,,Total number of partial batch failures for a given table_name tag,-1,envoy,
 envoy.http.buffer.rq_timeout,count,,timeout,,Total requests that timed out waiting for a full request,-1,envoy,
-envoy.http.rds.config_reload,count,,event,,Total API fetches that resulted in a config reload due to a different config,0,envoy,rds config reloads
+envoy.http.rds.config_reload,count,,request,,Total API fetches that resulted in a config reload due to a different config,0,envoy,rds config reloads
 envoy.http.rds.update_attempt,count,,request,,Total API fetches attempted,0,envoy,rds total api accesses
 envoy.http.rds.update_success,count,,request,,Total API fetches completed successfully,1,envoy,rds successful api accesses
 envoy.http.rds.update_failure,count,,request,,Total API fetches that failed (either network or schema errors),-1,envoy,rds failed api accesses
