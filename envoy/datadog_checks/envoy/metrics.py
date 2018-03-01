@@ -441,6 +441,94 @@ METRICS = {
         'tags': ('stat_prefix', 'collection', 'callsite', ),
         'method': 'histogram',
     },
+    'listener.downstream_cx_total': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.downstream_cx_destroy': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.downstream_cx_active': {
+        'tags': ('address', ),
+        'method': 'gauge',
+    },
+    'listener.downstream_cx_length_ms': {
+        'tags': ('address', ),
+        'method': 'histogram',
+    },
+    'listener.ssl.connection_error': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.handshake': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.session_reused': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.no_certificate': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.fail_no_sni_match': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.fail_verify_no_cert': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.fail_verify_error': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.fail_verify_san': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.fail_verify_cert_hash': {
+        'tags': ('address', ),
+        'method': 'count',
+    },
+    'listener.ssl.cipher': {
+        'tags': ('address', 'cipher', ),
+        'method': 'count',
+    },
+    'listener_manager.listener_added': {
+        'tags': (),
+        'method': 'count',
+    },
+    'listener_manager.listener_modified': {
+        'tags': (),
+        'method': 'count',
+    },
+    'listener_manager.listener_removed': {
+        'tags': (),
+        'method': 'count',
+    },
+    'listener_manager.listener_create_success': {
+        'tags': (),
+        'method': 'count',
+    },
+    'listener_manager.listener_create_failure': {
+        'tags': (),
+        'method': 'count',
+    },
+    'listener_manager.total_listeners_warming': {
+        'tags': (),
+        'method': 'gauge',
+    },
+    'listener_manager.total_listeners_active': {
+        'tags': (),
+        'method': 'gauge',
+    },
+    'listener_manager.total_listeners_draining': {
+        'tags': (),
+        'method': 'gauge',
+    },
     '': {
         'tags': (),
         'method': '',
