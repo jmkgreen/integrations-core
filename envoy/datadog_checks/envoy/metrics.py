@@ -1053,14 +1053,6 @@ METRICS = {
         'tags': ('name', ),
         'method': 'count',
     },
-    'cluster.outlier_detection.ejections_total': {
-        'tags': ('name', ),
-        'method': 'count',
-    },
-    'cluster.outlier_detection.ejections_consecutive_5xx': {
-        'tags': ('name', ),
-        'method': 'count',
-    },
     'cluster.upstream_rq_1xx': {
         'tags': ('name', ),
         'method': 'count',
